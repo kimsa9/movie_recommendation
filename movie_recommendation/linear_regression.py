@@ -58,8 +58,9 @@ def test_linear_regression():
                               evaluator=RegressionEvaluator(),
                               numFolds=2)
 
+
     # Train model.  This also runs the indexer.
-    model = pipeline.fit(df)
+    model = crossval.fit(df)
 
     # Make predictions.
     predictions = model.transform(trainingData)

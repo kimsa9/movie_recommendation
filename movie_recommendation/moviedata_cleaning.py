@@ -71,10 +71,10 @@ def process_movies_data(path_movie):
 
 def estimate_year(x, df_movie, mean_year_dataset):
     """
-    Fill the missing release dates
-    :param x:
-    :param df_movies:
-    :param mean_year_dataset:
+    Fill the missing release dates by estimating the year
+    :param x: row of df_movie with filling release-date
+    :param df_movies:dataframe of movies metadata
+    :param mean_year_dataset: mean year of release-date in the dataset
     :return:
     """
 
