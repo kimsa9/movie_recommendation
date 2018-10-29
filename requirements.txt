@@ -1,0 +1,11 @@
+pyspark
+numpy>=1.13
+pandas>=0.20
+scikit_learn>=0.19
+nltk
+datetime
+ast
+collections
+string
+json
+time
