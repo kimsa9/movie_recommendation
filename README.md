@@ -21,36 +21,6 @@ The solution will be evaluated using root mean square prediction error.
 **Goal 2 :**
 For all the movies that are rated in movies_metadata.csv file, create a file that contains pairs of (movie, movie) (movies are distinct) containing three columns: Id, MovieId, MovieId and Rating.
 
-# Entries
-
-### movies_metadata.csv
-Features
-
-- adult: Indicates if the movie is X-Rated or Adult.
-- belongs\_to\_collection: A stringified dictionary that gives information on the movie series the particular film belongs to.
-- budget: The budget of the movie in dollars.
-- genres: A stringified list of dictionaries that list out all the genres associated with the movie.
-- homepage: The Official Homepage of the move.
-- id: The ID of the move.
-- imdb_id: The IMDB ID of the movie.
-- original_language: The language in which the movie was originally shot in.
-- original_title: The original title of the movie.
-- overview: A brief blurb of the movie.
-- popularity: The Popularity Score assigned by TMDB.
-- poster_path: The URL of the poster image.
-- production_companies: A stringified list of production companies involved with the making of the movie.
-- production_countries: A stringified list of countries where the movie was shot/produced in.
-- release_date: Theatrical Release Date of the movie.
-- revenue: The total revenue of the movie in dollars.
-- runtime: The runtime of the movie in minutes.
-- spoken_languages: A stringified list of spoken languages in the film.
-- status: The status of the movie (Released, To Be Released, Announced, etc.)
-- tagline: The tagline of the movie.
-- title: The Official Title of the movie.
-- video: Indicates if there is a video present of the movie with TMDB.
-- vote_average: The average rating of the movie.
-- vote_count: The number of votes by users, as counted by TMDB.
-
 # Method used
 
 - Collaborative filtering.
@@ -85,6 +55,42 @@ We could also have tried clustering algorithms on the cleaned movie dataset.
 # Installation
 
 Can be installed using `pip install --process-dependency-links -e .`   
+
+
+# Entries description
+
+### movies_metadata.csv
+
+- adult: Indicates if the movie is X-Rated or Adult.
+- belongs\_to\_collection: A stringified dictionary that gives information on the movie series the particular film belongs to.
+- budget: The budget of the movie in dollars.
+- genres: A stringified list of dictionaries that list out all the genres associated with the movie.
+- homepage: The Official Homepage of the move.
+- id: The ID of the move.
+- imdb_id: The IMDB ID of the movie.
+- original_language: The language in which the movie was originally shot in.
+- original_title: The original title of the movie.
+- overview: A brief blurb of the movie.
+- popularity: The Popularity Score assigned by TMDB.
+- poster_path: The URL of the poster image.
+- production_companies: A stringified list of production companies involved with the making of the movie.
+- production_countries: A stringified list of countries where the movie was shot/produced in.
+- release_date: Theatrical Release Date of the movie.
+- revenue: The total revenue of the movie in dollars.
+- runtime: The runtime of the movie in minutes.
+- spoken_languages: A stringified list of spoken languages in the film.
+- status: The status of the movie (Released, To Be Released, Announced, etc.)
+- tagline: The tagline of the movie.
+- title: The Official Title of the movie.
+- video: Indicates if there is a video present of the movie with TMDB.
+- vote_average: The average rating of the movie.
+- vote_count: The number of votes by users, as counted by TMDB.
+
+
+### ratings.csv
+- userId
+- movieId
+- rating
 
 # References
 

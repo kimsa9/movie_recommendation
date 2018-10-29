@@ -1,4 +1,5 @@
 import time
+import os
 
 import pyspark
 from pyspark.sql.functions import mean, col
@@ -10,10 +11,13 @@ from movie_recommendation.apply_als import apply_model
 if __name__ == "__main__":
 
     # Build and apply the model
-
     path_rating ="data/ratings.csv"
     path_eval = "data/evaluation_ratings.csv"
     path_movie = "data/"
+
+    if not os.path.exists("../output/"):
+        os.mkdir("../output/")
+    output_path = "../output/evaluation_rating.csv"
 
     start = time.time()
 
@@ -37,7 +41,6 @@ if __name__ == "__main__":
     build_model(df_rating, save = True, output_model_path = "output/model", output_param_path = "output/params")
 
     # apply the model to the evaluation data
-    output_path = "../output/evaluation_rating.csv"
     apply_model(sc, path_eval, output_path)
 
     print("time :", time.time() - start)
