@@ -82,6 +82,10 @@ Tryed to build a item-item similarity method using cosine similarity in the scri
 
 We could also have tried clustering algorithms on the cleaned movie dataset. 
 
+# Installation
+
+Can be installed using `pip install --process-dependency-links -e .`   
+
 # References
 
 Data exploration
